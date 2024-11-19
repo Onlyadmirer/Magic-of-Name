@@ -1,0 +1,83 @@
+body {
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    font-style: italic
+}
+
+.nama {
+    border: 1px solid #ffffff6f;
+    border-radius: 20px;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-top: 10rem;
+    backdrop-filter: blur(10px);
+}
+
+.nama input {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: none;
+    background-color: #6473be62;
+    color: #000000;
+    outline: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #ffffff00;
+    border-top: 0;
+    border-left: 0;
+    border-bottom: 2px inset rgba(255, 255, 255, 0.5); /* Border inset di bawah */
+    border-right: 2px inset rgba(255, 255, 255, 0.5); /* Border inset di kanan */
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #578fead4;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Efek box shadow */
+}
+.alert {
+    display: block;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    background-color: #628ee5; /* Merah */
+    color: #000000;
+    border-bottom: 5px inset rgba(255, 255, 255, 0.5); /* Border inset di bawah */
+    border-right: 5px inset rgba(255, 255, 255, 0.5); /* Border inset di kanan */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transform: translateY(-12rem); /* Memindahkan sedikit ke atas untuk efek masuk */
+    transition: 0.5s; /* Transisi untuk opacity dan transform */
+}
+
+.alert .row {
+    display: flex;
+    flex-direction: row;
+    
+}
+.alert .row span {
+    margin : 0.6rem;
+}
+
+.alert .row p {
+    margin: 2.9rem 1rem 1rem 0.1rem ;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
