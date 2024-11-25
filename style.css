@@ -1,19 +1,21 @@
 body {
     background-image: url(bg.jpg);
     background-repeat: no-repeat;
-    background-position-x: center;
+    background-size: 100vh;
     text-align: center;
     font-family: 'poppins', sans-serif;
-    font-style: italic
+    font-style: italic;
+    overflow: hidden;
 }
 
 .nama {
     border: 1px solid #ffffff6f;
     border-radius: 20px;
-    padding: 1rem 1rem 1rem 1rem;
-    margin-top: 10rem;
+    padding: 1rem;
+    margin: 15rem 8%;
     backdrop-filter: blur(10px);
     display: block;
+    justify-items: center;
 }
 
 .nama input {
@@ -24,9 +26,11 @@ body {
     outline: none;
     border-radius: 10px;
     text-align: center;
+    display: block;
 }
 
 button {
+    display: block;
     background-color: #ffffff00;
     border-top: 0;
     border-left: 0;
@@ -44,17 +48,38 @@ button:hover {
     background-color: #578fead4;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Efek box shadow */
 }
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-1000%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(-210%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
 .alert {
     display: block;
-    padding: 0.5rem 0 0.5rem 0.5rem;
+    margin: 10rem 7%;
+    padding: 1rem 0 2rem 0.5rem;
     background-color: #628ee5; /* Merah */
     color: #000000;
     border-bottom: 5px inset rgba(255, 255, 255, 0.5); /* Border inset di bawah */
     border-right: 5px inset rgba(255, 255, 255, 0.5); /* Border inset di kanan */
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    transform: translateY(-12rem); /* Memindahkan sedikit ke atas untuk efek masuk */
-    transition: 0.5s; /* Transisi untuk opacity dan transform */
+    border-radius: 15px; /* Memindahkan sedikit ke atas untuk efek masuk */
+    animation: slideIn 0.5s forwards; /* Transisi untuk opacity dan transform */
 }
 
 .alert .row {
@@ -66,9 +91,13 @@ button:hover {
     margin : 0.6rem;
 }
 
-.alert .row p {
+.alert .row .motiv {
     margin: 2.9rem 1rem 1rem 0.1rem ;
 }
+.alert .akmal {
+    font-size: 0.7rem;
+}
+
 .closebtn {
     margin-left: 15px;
     color: white;
@@ -81,4 +110,5 @@ button:hover {
 
 .hidden {
     display: none;
+    animation: slideOut 0.5s forwards;
 }
